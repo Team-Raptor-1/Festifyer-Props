@@ -1,29 +1,38 @@
-import React from 'react'
-import "../styles/Navbar.css"
-import Tool from  "./components"
 
-const Navbar = () => {
+import React from 'react';
+import "../styles/Navbar.css";
+import Tool from "./components";
+import { Navbar, Nav, Container, Button } from 'react-bootstrap';
+
+const CustomNavbar = () => {
   return (
-    <>
-      <nav>
-      <img src="https://www.festifyer.com/storage/system/6fYpjT6r6ugsHt5aYXOm59JeRHk7OslnDU3yktbl.png" alt="alternative"/>
-        <div>
-          <ul id='navbar' >
-            <li><a href="/"> <Tool blogs= 'Blogs'/></a></li>
-            <li><a href="/"> <Tool contacts = 'Contact'/></a></li>
-          <button ><Tool login = 'Abdullah' /></button>
-         
-            
-          </ul>
-        </div>
+    <Navbar expand="lg">
+      <Container>
+        <Navbar.Brand href="/">
+          <img src="https://www.festifyer.com/storage/system/6fYpjT6r6ugsHt5aYXOm59JeRHk7OslnDU3yktbl.png" alt="alternative" />
+        </Navbar.Brand>
 
-        <div id="mobile" >
-          <i id='bar' ></i>
-          {/* <i class='bx bx-x'></i> */}
-        </div>
-      </nav>
-    </>
-  )
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="ms-auto">
+            <Nav.Link href="/"className = "nav-link ms-auto">
+              <Tool blogs="Blogs" />
+            </Nav.Link>
+            <Nav.Link href="/" className = "nav-link ms-auto">
+              <Tool contacts="Contact" />
+            </Nav.Link>
+          </Nav>
+          <Nav>
+            <Button variant="primary" className = "ms-auto transparent-button">
+              <Tool login="Abdullah" />
+
+            </Button>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+  );
 }
 
-export default Navbar;
+export default CustomNavbar;
