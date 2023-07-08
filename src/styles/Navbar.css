@@ -6,7 +6,9 @@
   padding: 0px;
   box-sizing: border-box;
 }
-
+.nav-link:hover {
+  color: orange;
+}
 nav {
   display: flex;
   align-items: center;
@@ -32,6 +34,11 @@ nav img{
   margin-right: 160px;
  
   
+}
+.transparent-button {
+  background-color: transparent;
+  border-color: black;
+  color:black;
 }
 
 #navbar button{
@@ -85,7 +92,7 @@ nav img{
   font-size: 1.6rem;
   text-decoration: none;
   font-weight: 600;
-  color: #0077ff
+  color: #0077ff;
 
 
 }
